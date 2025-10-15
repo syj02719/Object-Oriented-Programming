@@ -1,9 +1,20 @@
 import java.util.Scanner;
 
 class Homework4 {
+    //재귀
     static int gcd(int m, int n) {
         if (n == 0) return m;
         return gcd(n, m % n);
+    }
+
+    //반복문
+    static int gcdIterative(int m, int n) {
+        while (n != 0) {
+            int r = m % n;
+            m = n;
+            n = r;
+        }
+        return m;
     }
 
     public static void main(String[] args) {
